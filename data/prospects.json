@@ -1,0 +1,195 @@
+[
+ {
+  "id": 2268590294,
+  "lat": 43.63202,
+  "lon": 3.85461,
+  "tags": {
+   "name": "Synapse café",
+   "amenity": "fast_food",
+   "cuisine": "sandwich;breakfast;salad;pasta",
+   "phone": "+33 4 67 63 09 66",
+   "email": "Synapsecafe.montpellier@gmail.com",
+   "opening_hours": "Mo-Fr 07:45-19:00; Sa 08:00-14:00",
+   "addr:housenumber": "100",
+   "addr:street": "Rue des Pétètes",
+   "addr:postcode": "34090",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "wheelchair": "yes",
+   "diet:vegetarian": "yes"
+  }
+ },
+ {
+  "id": 583260046,
+  "lat": 43.61347,
+  "lon": 3.87918,
+  "tags": {
+   "name": "Le Chat Perché",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 4 67 60 88 59",
+   "email": "resto-lechatperche@hotmail.fr",
+   "addr:housenumber": "10",
+   "addr:street": "Rue du Collège Duvergier",
+   "addr:postcode": "34000",
+   "wheelchair": "yes"
+  }
+ },
+ {
+  "id": 3633000707,
+  "lat": 43.61211,
+  "lon": 3.87643,
+  "tags": {
+   "name": "Le p'ti Taureau",
+   "amenity": "restaurant",
+   "cuisine": "burger",
+   "phone": "+33 9 81 87 99 15",
+   "email": "leptitaureau@gmail.com",
+   "addr:housenumber": "7",
+   "addr:street": "Rue de l'Université",
+   "addr:postcode": "34000",
+   "outdoor_seating": "yes"
+  }
+ },
+ {
+  "id": 3629381253,
+  "lat": 43.61446,
+  "lon": 3.87995,
+  "tags": {
+   "name": "El Pincho Loco",
+   "amenity": "restaurant",
+   "cuisine": "spanish;tapas",
+   "phone": "+33 9 82 26 94 97",
+   "email": "elpincholocomontpellier@gmail.com",
+   "addr:postcode": "34000",
+   "wheelchair": "yes"
+  }
+ },
+ {
+  "id": 579783666,
+  "lat": 43.61689,
+  "lon": 3.87462,
+  "tags": {
+   "name": "Au Rythme du Pain",
+   "shop": "bakery",
+   "email": "aurythmedupain@gmail.com",
+   "opening_hours": "Mo-Sa 07:00-19:30",
+   "addr:housenumber": "11",
+   "addr:street": "Rue du Faubourg Boutonnet",
+   "addr:postcode": "34090"
+  }
+ },
+ {
+  "id": 621195696,
+  "lat": 43.61459,
+  "lon": 3.87927,
+  "tags": {
+   "name": "Tiger Noodles Louis Blanc",
+   "amenity": "restaurant",
+   "cuisine": "chinese;noodle",
+   "phone": "+33 9 54 31 00 82",
+   "opening_hours": "Mo-Su 11:30-14:30,18:30-23:00",
+   "addr:housenumber": "4",
+   "addr:street": "Boulevard Louis Blanc",
+   "addr:postcode": "34000",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "delivery": "yes"
+  }
+ },
+ {
+  "id": 724168984,
+  "lat": 43.6115,
+  "lon": 3.8754,
+  "tags": {
+   "name": "Vegorilla",
+   "amenity": "restaurant",
+   "cuisine": "burger",
+   "phone": "+33 4 67 66 60 37",
+   "opening_hours": "Tu-Fr 19:00-22:00; Sa 12:00-14:00,19:00-22:00; Su 12:30-14:00,19:00-22:00",
+   "addr:housenumber": "6",
+   "addr:street": "Rue du Puits des Esquilles",
+   "addr:postcode": "34000",
+   "diet:vegetarian": "yes"
+  }
+ },
+ {
+  "id": 2157164325,
+  "lat": 43.61473,
+  "lon": 3.82953,
+  "tags": {
+   "name": "Craft Pizza",
+   "amenity": "fast_food",
+   "cuisine": "pizza",
+   "phone": "+33 4 11 93 06 30",
+   "opening_hours": "Mo-Su 18:00-01:00",
+   "addr:housenumber": "12",
+   "addr:street": "Route de Lodève",
+   "addr:postcode": "34080",
+   "outdoor_seating": "yes",
+   "wheelchair": "yes"
+  }
+ },
+ {
+  "id": 2955520001,
+  "lat": 43.61001,
+  "lon": 3.87925,
+  "tags": {
+   "name": "Hakko",
+   "amenity": "restaurant",
+   "cuisine": "international",
+   "phone": "+33 9 85 07 65 28",
+   "opening_hours": "Tu-Th 12:00-14:00; Fr 12:00-14:00,19:30-22:00",
+   "addr:housenumber": "20",
+   "addr:street": "Rue Jacques Coeur",
+   "addr:postcode": "34000"
+  }
+ },
+ {
+  "id": 579739333,
+  "lat": 43.61655,
+  "lon": 3.88003,
+  "tags": {
+   "name": "Chez Vincent",
+   "amenity": "restaurant",
+   "cuisine": "italian",
+   "phone": "+33 4 67 79 64 62",
+   "opening_hours": "Tu-Fr 12:00-13:30,19:30-22:30; Sa-Su 19:00-22:30; Mo off",
+   "wheelchair": "yes"
+  }
+ },
+ {
+  "id": 598975860,
+  "lat": 43.6115,
+  "lon": 3.87456,
+  "tags": {
+   "name": "Comptoir de l'Arc",
+   "amenity": "bar",
+   "phone": "+33 4 67 60 30 79",
+   "opening_hours": "Mo-Su 07:00-01:00",
+   "outdoor_seating": "yes"
+  }
+ },
+ {
+  "id": 674049725,
+  "lat": 43.6106,
+  "lon": 3.86557,
+  "tags": {
+   "name": "Boulangerie Folpain",
+   "shop": "bakery",
+   "phone": "+33 4 15 39 23 89",
+   "opening_hours": "Mo-Sa 08:00-13:00,16:00-19:00; Su 08:00-13:00"
+  }
+ },
+ {
+  "id": 1354577225,
+  "lat": 43.62099,
+  "lon": 3.87273,
+  "tags": {
+   "name": "La boucherie de Boutonnet",
+   "shop": "butcher",
+   "phone": "+33 4 99 63 89 98",
+   "opening_hours": "We-Sa 07:30-13:00,16:30-19:30; Su 09:00-12:30"
+  }
+ }
+]

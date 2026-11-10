@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Le Chat Perché — Montpellier</title>
+<meta name="description" content="Le Chat Perché, Restaurant · cuisine française à Montpellier. Une cuisine généreuse, faite maison, dans une ambiance chaleureuse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--a:#b4532a;--d:#2b1a12;--l:#faf6f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:#2a2421;background:var(--l);line-height:1.6}
+a{color:inherit}
+.demo{position:sticky;top:0;z-index:10;background:#111;color:#fff;font-size:14px;padding:10px 16px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center}
+.demo b{color:#ffd166}
+.demo a{background:#ffd166;color:#111;text-decoration:none;font-weight:600;padding:6px 14px;border-radius:999px}
+header.hero{min-height:min(82vh,760px);display:grid;place-items:center;text-align:center;color:#fff;padding:80px 20px;position:relative;overflow:hidden;
+background:radial-gradient(1200px 600px at 20% 10%,color-mix(in srgb,var(--a) 70%,transparent),transparent),radial-gradient(900px 500px at 90% 90%,color-mix(in srgb,var(--a) 45%,transparent),transparent),var(--d)}
+header.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px}
+.hero>div{position:relative;z-index:1;max-width:760px}
+.tag{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+h1{font-family:Fraunces,serif;font-size:clamp(44px,9vw,88px);line-height:1;font-weight:800;margin-bottom:20px}
+.hero p{font-size:clamp(17px,2.4vw,21px);opacity:.88;margin-bottom:34px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:15px 28px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--a);color:#fff;box-shadow:0 10px 30px color-mix(in srgb,var(--a) 50%,transparent)}
+.btn.s{border:1px solid rgba(255,255,255,.4);color:#fff}
+.hidden{display:none!important}
+section{max-width:1080px;margin:0 auto;padding:90px 22px}
+h2{font-family:Fraunces,serif;font-size:clamp(32px,5vw,46px);color:var(--d);margin-bottom:14px}
+.lead{font-size:19px;color:#5a504a;max-width:620px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:40px;list-style:none}
+.feat li{background:#fff;border-radius:18px;padding:26px;font-weight:600;color:var(--d);box-shadow:0 1px 0 rgba(0,0,0,.04),0 12px 30px -18px rgba(0,0,0,.25);border-top:4px solid var(--a)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:22px;padding:34px;box-shadow:0 12px 40px -24px rgba(0,0,0,.3)}
+.hours{list-style:none}.hours li{padding:10px 0;border-bottom:1px dashed #e7ddd3}
+.muted{color:#7a6f68}
+iframe{width:100%;height:340px;border:0;border-radius:22px}
+.cta{background:var(--d);color:#fff;text-align:center;border-radius:28px;margin:0 22px 90px;padding:70px 22px}
+.cta h2{color:#fff}
+footer{text-align:center;padding:30px;color:#8a7f78;font-size:14px}
+.reveal{opacity:0;transform:translateY(24px);transition:all .7s ease}.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo">✨ <span>Site <b>démo</b> créé pour Le Chat Perché — il peut être en ligne sur votre propre adresse dès aujourd'hui.</span><a href="https://buy.stripe.com/A_REMPLACER?client_reference_id=le-chat-perche-46">Je le veux · 290 €</a></div>
+
+<header class="hero"><div>
+<span class="tag">Restaurant · cuisine française</span>
+<h1>Le Chat Perché</h1>
+<p>Une cuisine généreuse, faite maison, dans une ambiance chaleureuse.</p>
+<div class="btns">
+<a class="btn p " href="tel:+33467608859">📞 +33 4 67 60 88 59</a>
+<a class="btn s" href="#infos">Horaires & accès</a>
+</div></div></header>
+
+<section class="reveal">
+<h2>Bienvenue chez Le Chat Perché</h2>
+<p class="lead">Une cuisine généreuse, faite maison, dans une ambiance chaleureuse. Retrouvez-nous au 10 Rue du Collège Duvergier, 34000 Montpellier.</p>
+<ul class="feat"><li>Accès PMR</li></ul>
+</section>
+
+<section id="infos" class="reveal">
+<div class="grid2">
+<div class="card"><h2>Horaires</h2><p class='muted'>Horaires sur demande — appelez-nous.</p>
+<p style="margin-top:22px"><b>Adresse</b><br>10 Rue du Collège Duvergier, 34000 Montpellier</p>
+<p class="" style="margin-top:12px"><b>Téléphone</b><br><a href="tel:+33467608859">+33 4 67 60 88 59</a></p></div>
+<iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=3.87518,43.61097,3.88318,43.61597&layer=mapnik&marker=43.61347,3.87918" title="Plan d'accès"></iframe>
+</div>
+</section>
+
+<div class="cta reveal">
+<h2>Venez nous voir</h2>
+<p style="opacity:.85;margin:10px 0 28px">10 Rue du Collège Duvergier, 34000 Montpellier</p>
+<a class="btn p " href="tel:+33467608859">Appeler maintenant</a>
+</div>
+
+<footer>© Le Chat Perché · Montpellier — démo réalisée par Moitié · <a href="mailto:contact@mamoitie.fr?subject=Ne%20plus%20me%20contacter%20(le-chat-perche-46)">ne plus être contacté</a></footer>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
