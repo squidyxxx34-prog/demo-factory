@@ -191,5 +191,370 @@
    "phone": "+33 4 99 63 89 98",
    "opening_hours": "We-Sa 07:30-13:00,16:30-19:30; Su 09:00-12:30"
   }
+ },
+ {
+  "id": 427696051,
+  "lat": 43.50518,
+  "lon": 3.31016,
+  "tags": {
+   "name": "Le Grand Café",
+   "amenity": "restaurant",
+   "addr:city": "Roujan",
+   "cuisine": "french",
+   "phone": "+33 6 66 12 07 31",
+   "email": "legrandcaferoujan@gmail.com",
+   "opening_hours": "Mo-Sa 08:30-00:30",
+   "addr:street": "1 Avenue de Cassan",
+   "addr:postcode": "34320",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 1781597257,
+  "lat": 43.80904,
+  "lon": 4.36213,
+  "tags": {
+   "name": "La Cantine",
+   "amenity": "restaurant",
+   "addr:city": "Nîmes",
+   "cuisine": "french",
+   "phone": "+33 4 66 21 62 85",
+   "email": "la-cantine-carree@orange.fr",
+   "opening_hours": "Mo-Sa 08:00-20:00",
+   "addr:street": "148 Rue Jean Lauret",
+   "addr:postcode": "30900",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2156280044,
+  "lat": 43.35568,
+  "lon": 3.52892,
+  "tags": {
+   "name": "Délicatessen Apéro Dînette",
+   "amenity": "restaurant",
+   "addr:city": "Marseillan",
+   "cuisine": "french",
+   "phone": "+33 4 67 77 38 93",
+   "email": "al.delicatessen@hotmail.fr",
+   "opening_hours": "Tu-Fr 12:00-14:30,19:30-22:30; Sa 19:00-22:30",
+   "addr:street": "4 Place Géneral Guillaut",
+   "addr:postcode": "34340",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2363110081,
+  "lat": 43.99239,
+  "lon": 3.60554,
+  "tags": {
+   "name": "Le Qu'Es Aquo",
+   "amenity": "restaurant",
+   "addr:city": "Le Vigan",
+   "cuisine": "french",
+   "phone": "+33 4 99 92 04 93",
+   "email": "marc.aubaret@orange.fr",
+   "opening_hours": "Tu-Su 10:00-15:00; Fr,Sa 10:00-15:00,18:30-21:00",
+   "addr:street": "27 Boulevard du Plan d'Auvergne",
+   "addr:postcode": "30120",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2482538463,
+  "lat": 43.40137,
+  "lon": 3.69788,
+  "tags": {
+   "name": "Le Boucanier",
+   "amenity": "restaurant",
+   "addr:city": "Sète",
+   "cuisine": "tapas;regional",
+   "phone": "+33 9 80 61 21 45",
+   "email": "nicolas.jean1509@gmail.com",
+   "opening_hours": "11:45-23:45",
+   "addr:street": "4 Quai Aspirant Herber",
+   "addr:postcode": "34200",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2512599519,
+  "lat": 43.22868,
+  "lon": 2.946,
+  "tags": {
+   "name": "La Cascade",
+   "amenity": "restaurant",
+   "addr:city": "Moussan",
+   "cuisine": "pizza;french;tapas",
+   "phone": "+33 4 68 43 25 56",
+   "email": "lacascadedemoussan@gmail.com",
+   "opening_hours": "Th 12:00-13:30,19:00-20:30; Fr-Sa 12:00-13:30,19:00-21:30; Su 12:00-13:30",
+   "addr:street": "9 Avenue des Quatre Chemins",
+   "addr:postcode": "11120",
+   "outdoor_seating": "yes",
+   "takeaway": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2521364312,
+  "lat": 43.3994,
+  "lon": 3.69653,
+  "tags": {
+   "name": "Saint-Clair",
+   "amenity": "cafe",
+   "addr:city": "Sète",
+   "cuisine": "seafood",
+   "phone": "+33 4 67 74 72 37",
+   "email": "disserniojeanluc@gmail.com",
+   "opening_hours": "Tu-Su 11:00-01:00",
+   "addr:street": "1 Quai Maximin Licciardi",
+   "addr:postcode": "34200",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2521444565,
+  "lat": 43.40162,
+  "lon": 3.6969,
+  "tags": {
+   "name": "La Suite By les 2 Ramiers",
+   "amenity": "restaurant",
+   "addr:city": "Sète",
+   "cuisine": "seafood;regional",
+   "phone": "+33 4 67 74 30 43",
+   "email": "saslatrois@gmail.com",
+   "opening_hours": "06:00-24:00",
+   "addr:street": "1 Rue Paul Valéry",
+   "addr:postcode": "34200",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2521592359,
+  "lat": 43.39801,
+  "lon": 3.69614,
+  "tags": {
+   "name": "La Véradier",
+   "amenity": "restaurant",
+   "addr:city": "Sète",
+   "cuisine": "seafood;regional",
+   "phone": "+33 4 67 74 49 70",
+   "email": "Christineromero@hotmail.fr",
+   "opening_hours": "12:00-14:00,19:00-23:00",
+   "addr:street": "1 Promenade Jean-Baptiste Marty",
+   "addr:postcode": "34200",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2523378806,
+  "lat": 43.40171,
+  "lon": 3.6979,
+  "tags": {
+   "name": "L'Olivier",
+   "amenity": "restaurant",
+   "addr:city": "Sète",
+   "cuisine": "seafood",
+   "phone": "+33 9 54 75 19 49",
+   "email": "mzaimeche@outlook.fr",
+   "opening_hours": "08:00-24:00",
+   "addr:street": "1 Quai de l'Aspirant Herber",
+   "addr:postcode": "34200",
+   "outdoor_seating": "yes",
+   "wheelchair": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 2665062861,
+  "lat": 43.09098,
+  "lon": 2.62058,
+  "tags": {
+   "name": "Café Brasserie de la Promenade",
+   "amenity": "restaurant",
+   "addr:city": "Lagrasse",
+   "cuisine": "regional",
+   "phone": "+33 4 68 43 15 89",
+   "email": "willy.laurent66@gmail.com",
+   "opening_hours": "Tu-Su 09:00-21:00",
+   "addr:street": "8 Boulevard de la Promenade",
+   "addr:postcode": "11220"
+  },
+  "batch": 2
+ },
+ {
+  "id": 3211150666,
+  "lat": 43.8271,
+  "lon": 4.21784,
+  "tags": {
+   "name": "Casa Leon'",
+   "amenity": "fast_food",
+   "addr:city": "Clarensac",
+   "cuisine": "pizza;tapas",
+   "phone": "+33 4 66 75 15 41",
+   "email": "pizzacasaleon@gmail.com",
+   "opening_hours": "Tu-Th 12:00-14:30,18:00-21:30; Fr,Sa 12:00-14:30,18:00-22:00",
+   "addr:street": "1 Grand'rue",
+   "addr:postcode": "30870",
+   "takeaway": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 3635853911,
+  "lat": 43.55652,
+  "lon": 4.09218,
+  "tags": {
+   "name": "Le Repaire",
+   "amenity": "restaurant",
+   "addr:city": "La Grande-Motte",
+   "cuisine": "french",
+   "phone": "+33 9 84 52 66 44",
+   "email": "lerepaire.lgm@gmail.com",
+   "opening_hours": "08:00-24:00",
+   "addr:street": "Place Diana",
+   "addr:postcode": "34280",
+   "outdoor_seating": "yes",
+   "wheelchair": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 3654674629,
+  "lat": 43.55835,
+  "lon": 4.08494,
+  "tags": {
+   "name": "L'Ombrine",
+   "amenity": "restaurant",
+   "addr:city": "La Grande-Motte",
+   "cuisine": "seafood;french",
+   "phone": "+33 4 67 56 57 36",
+   "email": "restaurant-lombrine@hotmail.fr",
+   "opening_hours": "12:00-15:00,19:00-22:00; We off",
+   "addr:street": "93 Quai Charles de Gaulle",
+   "addr:postcode": "34280",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "wheelchair": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 3655696232,
+  "lat": 43.566,
+  "lon": 4.1003,
+  "tags": {
+   "name": "Pizzeria du Golf",
+   "amenity": "restaurant",
+   "addr:city": "La Grande-Motte",
+   "cuisine": "pizza",
+   "phone": "+33 9 52 26 25 16",
+   "email": "djelassisarah34@gmail.com",
+   "opening_hours": "12:00-15:00,18:00-21:00",
+   "addr:street": "264 Allée du Ponant",
+   "addr:postcode": "34280"
+  },
+  "batch": 2
+ },
+ {
+  "id": 3673121402,
+  "lat": 43.68074,
+  "lon": 4.09984,
+  "tags": {
+   "name": "Bistro Vino",
+   "amenity": "restaurant",
+   "addr:city": "Lunel-Viel",
+   "cuisine": "french",
+   "phone": "+33 6 62 33 63 31",
+   "email": "bistrotvino@gmail.com",
+   "opening_hours": "Mo-We 12:00-14:00; Th,Fr 12:00-14:00,19:30-21:00",
+   "addr:street": "50 Chemin des Fournels",
+   "addr:postcode": "34400",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 5060905453,
+  "lat": 43.55908,
+  "lon": 4.08352,
+  "tags": {
+   "name": "L'Estrambord",
+   "amenity": "restaurant",
+   "addr:city": "La Grande-Motte",
+   "cuisine": "tapas",
+   "phone": "+33 4 67 56 50 50",
+   "email": "pgestrambord@gmail.com",
+   "opening_hours": "07:30-01:00",
+   "addr:street": "18 Quai Georges Pompidou",
+   "addr:postcode": "34280",
+   "outdoor_seating": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 6205255612,
+  "lat": 43.50604,
+  "lon": 3.36965,
+  "tags": {
+   "name": "Le Rex",
+   "amenity": "bar",
+   "addr:city": "Caux",
+   "cuisine": "french",
+   "phone": "+33 9 51 40 18 51",
+   "email": "lerextaurant@gmail.com",
+   "opening_hours": "Mo-Sa 07:00-15:00,17:30-24:00; Su 07:30-15:00",
+   "addr:street": "9 Rue de l'Égalité",
+   "addr:postcode": "34720",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "delivery": "yes",
+   "wheelchair": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 6975276676,
+  "lat": 43.67824,
+  "lon": 4.11713,
+  "tags": {
+   "name": "Tacos Square",
+   "amenity": "fast_food",
+   "addr:city": "Lunel",
+   "cuisine": "mexican",
+   "phone": "+33 4 67 22 57 71",
+   "email": "tacos.square@gmail.com",
+   "opening_hours": "Mo 11:00-23:00; Tu-Th 11:00-15:00,18:00-23:00; Fr-Su 11:00-23:00",
+   "addr:street": "23 Rue des Fournels",
+   "addr:postcode": "34400",
+   "takeaway": "yes"
+  },
+  "batch": 2
+ },
+ {
+  "id": 7253111281,
+  "lat": 43.67826,
+  "lon": 4.1177,
+  "tags": {
+   "name": "La Cucina di Lola",
+   "amenity": "restaurant",
+   "addr:city": "Lunel",
+   "cuisine": "italian",
+   "phone": "+33 4 34 46 74 63",
+   "email": "lacucinadilola34@gmail.com",
+   "opening_hours": "Tu,We 12:00-14:00; Th-Sa 12:00-14:00,19:30-21:30",
+   "addr:street": "23 Rue des Fournels",
+   "addr:postcode": "34400"
+  },
+  "batch": 2
  }
 ]

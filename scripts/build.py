@@ -38,6 +38,8 @@ IMGS = {
     "pizza": ["1579751626657-72bc17010498", "1622880833523-7cf1c0bd4296", "1763647836753-e06fe1f8707b"],
     "burger": ["1568901346375-23c9450c58cd", "1572802419224-296b0aeee0d9", "1787687599745-de58c69af5d2"],
     "chinese": ["1623341214825-9f4f963727da", "1638866281450-3933540af86a", "1791369242400-ea6b19ff9ba5"],
+    "seafood": ["1793564967507-555a42921bff", "1787687599745-de58c69af5d2", "1791369242400-ea6b19ff9ba5"],
+    "mexican": ["1628324716243-0c9c29971a58", "1471110338536-858caa3dbe45", "1589778314823-d1c2bde0a31b"],
     "spanish": ["1656423521731-9665583f100c", "1609950547346-a4f431435b2b", "1793564967507-555a42921bff"],
     "french": ["1580654842920-37b786f32bfc", "1579027989536-b7b1f875659b", "1787687599745-de58c69af5d2"],
     "italian": ["1498579150354-977475b7ea0b", "1598720290281-9f26ae6d6f81", "1791369242400-ea6b19ff9ba5"],
@@ -48,7 +50,7 @@ IMGS = {
 def images(kind, cuisine):
     for c in cuisine.split(";"):
         c = c.strip()
-        key = {"noodle": "chinese", "ramen": "chinese", "tapas": "spanish", "breakfast": "sandwich"}.get(c, c)
+        key = {"noodle": "chinese", "ramen": "chinese", "tapas": "spanish", "breakfast": "sandwich", "fish": "seafood"}.get(c, c)
         if key in IMGS:
             return [U.format(i) for i in IMGS[key]]
     return [U.format(i) for i in IMGS.get(kind, IMGS["restaurant"])]
