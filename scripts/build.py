@@ -25,6 +25,42 @@ CUISINE_FR = {"italian": "italienne", "pizza": "pizzeria", "french": "française
     "regional": "régionale", "crepe": "crêperie", "asian": "asiatique", "moroccan": "marocaine",
     "spanish": "espagnole", "greek": "grecque", "turkish": "turque", "seafood": "fruits de mer",
     "coffee_shop": "coffee shop", "sandwich": "sandwichs", "tapas": "tapas", "korean": "coréenne", "breakfast": "petit-déj", "salad": "salades", "pasta": "pâtes", "noodle": "nouilles", "international": "du monde"}
+U = "https://images.unsplash.com/photo-{}?auto=format&fit=crop&w=2000&q=80"
+IMGS = {
+    "restaurant": ["1787687599745-de58c69af5d2", "1791369242400-ea6b19ff9ba5", "1793564967507-555a42921bff"],
+    "cafe": ["1554118811-1e0d58224f24", "1502462041640-b3d7e50d0662", "1445116572660-236099ec97a0"],
+    "fast_food": ["1628324716243-0c9c29971a58", "1471110338536-858caa3dbe45", "1589778314823-d1c2bde0a31b"],
+    "bar": ["1605270012917-bf157c5a9541", "1566417713940-fe7c737a9ef2", "1623408859815-22534357b3db"],
+    "hairdresser": ["1600948836101-f9ffda59d250", "1626379501846-0df4067b8bb9", "1626383137804-ff908d2753a2"],
+    "beauty": ["1600948836101-f9ffda59d250", "1626379501846-0df4067b8bb9", "1626383137804-ff908d2753a2"],
+    "bakery": ["1509440159596-0249088772ff", "1599819055803-717bba43890f", "1509440159596-0249088772ff"],
+    "butcher": ["1625643269470-5d3e7b69fa34", "1615937662601-4724eceda00f", "1767491654834-13bf58ed9522"],
+    "pizza": ["1579751626657-72bc17010498", "1622880833523-7cf1c0bd4296", "1763647836753-e06fe1f8707b"],
+    "burger": ["1568901346375-23c9450c58cd", "1572802419224-296b0aeee0d9", "1787687599745-de58c69af5d2"],
+    "chinese": ["1623341214825-9f4f963727da", "1638866281450-3933540af86a", "1791369242400-ea6b19ff9ba5"],
+    "spanish": ["1656423521731-9665583f100c", "1609950547346-a4f431435b2b", "1793564967507-555a42921bff"],
+    "french": ["1580654842920-37b786f32bfc", "1579027989536-b7b1f875659b", "1787687599745-de58c69af5d2"],
+    "italian": ["1498579150354-977475b7ea0b", "1598720290281-9f26ae6d6f81", "1791369242400-ea6b19ff9ba5"],
+    "sandwich": ["1621523133136-cea844f32bdf", "1621523131496-0a1af8e2b20c", "1554118811-1e0d58224f24"],
+}
+
+
+def images(kind, cuisine):
+    for c in cuisine.split(";"):
+        c = c.strip()
+        key = {"noodle": "chinese", "ramen": "chinese", "tapas": "spanish", "breakfast": "sandwich"}.get(c, c)
+        if key in IMGS:
+            return [U.format(i) for i in IMGS[key]]
+    return [U.format(i) for i in IMGS.get(kind, IMGS["restaurant"])]
+
+
+def name_html(name):
+    w = name.split()
+    if len(w) < 2:
+        return html.escape(name)
+    return html.escape(" ".join(w[:-1])) + " <em>" + html.escape(w[-1]) + "</em>"
+
+
 DAYS = {"Mo": "Lun", "Tu": "Mar", "We": "Mer", "Th": "Jeu", "Fr": "Ven", "Sa": "Sam", "Su": "Dim", "PH": "Fériés", "off": "fermé"}
 
 
@@ -67,15 +103,18 @@ def build(p):
     if t.get("wheelchair") == "yes": feats.append("Accès PMR")
     if t.get("diet:vegetarian") in ("yes", "only"): feats.append("Options végétariennes")
     feats = feats or ["Accueil chaleureux", "Produits de qualité", "Au cœur de " + city]
+    imgs = images(kind, t.get("cuisine", ""))
     bbox = f"{lon-0.004},{lat-0.0025},{lon+0.004},{lat+0.0025}" if lat else ""
     rep = {
         "{{NAME}}": html.escape(name), "{{LABEL}}": html.escape(label), "{{PITCH}}": html.escape(pitch),
         "{{ACCENT}}": accent, "{{DARK}}": dark, "{{ADDR}}": html.escape(addr or city),
         "{{PHONE}}": html.escape(phone), "{{TEL}}": re.sub(r"[^\d+]", "", phone),
         "{{PHONE_DISPLAY}}": "" if phone else "hidden", "{{HOURS}}": hours_html(t.get("opening_hours", "")),
-        "{{FEATURES}}": "".join(f"<li>{html.escape(f)}</li>" for f in feats),
+        "{{FEATURES}}": "".join(f"<li class='glass pill'>{html.escape(f)}</li>" for f in feats),
         "{{MAP}}": f"https://www.openstreetmap.org/export/embed.html?bbox={bbox}&layer=mapnik&marker={lat},{lon}" if lat else "",
-        "{{CITY}}": html.escape(city), "{{PRICE}}": str(CFG["price"]), "{{PAY}}": CFG["payment_link"],
+        "{{CITY}}": html.escape(city), "{{NAME_HTML}}": name_html(name),
+        "{{OH_JSON}}": json.dumps(t.get("opening_hours") or None), "{{LAT}}": str(lat), "{{LON}}": str(lon),
+        "{{IMG1}}": imgs[0], "{{IMG2}}": imgs[1], "{{IMG3}}": imgs[2], "{{PRICE}}": str(CFG["price"]), "{{PAY}}": CFG["payment_link"],
         "{{CONTACT}}": CFG["contact_email"], "{{BRAND}}": CFG["brand"], "{{SLUG}}": slug,
     }
     out = TPL
