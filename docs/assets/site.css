@@ -257,3 +257,9 @@ footer{padding-bottom:56px!important}
   header.nav{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none!important}
   header.nav.scrolled{background:var(--paper)}
 }
+
+/* ===== Site en une seule page : vues instantanées ===== */
+.view{display:none}
+.view.on{display:block}
+.hero img{translate:0 var(--py,0)}
+.menu-sec,#reserver{scroll-margin-top:130px}

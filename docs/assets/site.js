@@ -38,14 +38,14 @@
   }
 
   // Parallaxe douce sur la photo d'en-tête + navigation compacte au défilement
-  const heroImg = document.querySelector('.hero img');
+  const heroOf = () => document.querySelector('.view.on .hero img');
   const nav = document.querySelector('header.nav');
   let ticking = false;
   addEventListener('scroll', () => {
     if (ticking) return; ticking = true;
     requestAnimationFrame(() => {
       const y = scrollY;
-      if (heroImg && !reduce && y < innerHeight * 1.2) heroImg.style.transform = `translate3d(0,${y * 0.28}px,0) scale(1.06)`;
+      const hi = heroOf(); if (hi && !reduce && y < innerHeight * 1.2) hi.style.setProperty('--py', (y * 0.28) + 'px');
       if (nav) nav.classList.toggle('scrolled', y > 40);
       ticking = false;
     });
@@ -82,4 +82,39 @@
   b.addEventListener('click', () => set(!document.documentElement.classList.contains('menu-open')));
   ov.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+})();
+
+// Navigation instantanée entre les vues (tout est déjà chargé, une seule URL)
+(function () {
+  const views = [...document.querySelectorAll('.view')];
+  if (!views.length) return;
+  const names = views.map(v => v.dataset.view);
+  const show = (name, scrollId) => {
+    if (!names.includes(name)) name = 'accueil';
+    const swap = () => {
+      views.forEach(v => v.classList.toggle('on', v.dataset.view === name));
+      document.querySelectorAll('header.nav nav a, .menu-ov a.big').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + name));
+      const t = scrollId && document.getElementById(scrollId);
+      if (t) t.scrollIntoView({ block: 'start' }); else scrollTo(0, 0);
+    };
+    const cur = document.querySelector('.view.on');
+    if (cur && cur.dataset.view === name) { swap(); return; }
+    if (document.startViewTransition) document.startViewTransition(swap); else swap();
+  };
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]'); if (!a) return;
+    const h = a.getAttribute('href').slice(1);
+    if (names.includes(h)) {
+      e.preventDefault();
+      if (location.hash !== '#' + h) history.pushState(null, '', h === 'accueil' ? location.pathname : '#' + h);
+      show(h, a.dataset.scroll);
+    } else if (/^s\d+$/.test(h)) {
+      e.preventDefault();
+      const t = document.getElementById(h); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+  addEventListener('popstate', () => show(location.hash.slice(1) || 'accueil'));
+  if (location.hash.length > 1) show(location.hash.slice(1));
+  // précharge les images des autres vues dès que l'accueil est affiché
+  addEventListener('load', () => document.querySelectorAll('.view:not(.on) img').forEach(i => { i.loading = 'eager'; }));
 })();

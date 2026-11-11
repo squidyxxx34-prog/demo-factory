@@ -42,23 +42,23 @@ def render(c):
     def head(title, desc):
         return (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
                 f'<meta name="robots" content="noindex"><title>{E(title)}</title><meta name="description" content="{E(desc)}">{FONTS}'
-                f'<link rel="stylesheet" href="/assets/site.css"><style>:root{{--a:{c["accent"]}}}</style></head><body>')
+                f'<link rel="stylesheet" href="/assets/site.css"><link rel="preload" as="image" href="{c["imgs"][0]}"><style>:root{{--a:{c["accent"]}}}</style></head><body>')
 
     def top(active):
         nav = "".join(f'<a href="{h}" class="{"on" if k == active else ""}">{t}</a>' for k, h, t in
-                      [("home", f'/{c["slug"]}/', "Accueil"), ("carte", f'/{c["slug"]}/carte/', "La carte"), ("contact", f'/{c["slug"]}/contact/', "Contact & accès")])
+                      [("home", f'/{c["slug"]}/', "Accueil"), ("carte", f'#carte', "La carte"), ("contact", f'#contact', "Contact & accès")])
         return (f'<div class="demo">Aperçu créé pour <b>{E(c["name"])}</b> par {c["brand"]} — ce site peut être le vôtre dès aujourd’hui'
                 f'<a href="{c["pay"]}?client_reference_id={c["slug"]}">Je le veux · {c["price"]} €</a></div>'
                 f'<div class="topbar"><div class="wrap"><span><i class="dot" data-dot></i><span data-status>…</span></span>'
                 f'<span class="hide-m">📍 {E(c["addr"])}</span>'
                 + (f'<span>📞 <a href="tel:{c["tel"]}">{E(c["phone"])}</a></span>' if tel_ok else "") +
-                f'</div></div><header class="nav"><div class="wrap"><a class="brand" href="/{c["slug"]}/">{E(c["name"])}</a><nav>{nav}</nav>'
-                + (f'<a class="btn d" href="/{c["slug"]}/contact/#reserver">Réserver</a>' if c["kind"] in ("restaurant", "bar", "cafe") else call) +
+                f'</div></div><header class="nav"><div class="wrap"><a class="brand" href="#accueil">{E(c["name"])}</a><nav>{nav}</nav>'
+                + (f'<a class="btn d" href="#contact" data-scroll="reserver">Réserver</a>' if c["kind"] in ("restaurant", "bar", "cafe") else call) +
                 '<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>'
                 '</div></header>'
                 f'<div class="menu-ov" id="menu" aria-hidden="true"><div class="menu-in">'
                 + "".join(f'<a href="{h}" class="big {"on" if k == active else ""}"><small>0{i+1}</small>{t}</a>' for i, (k, h, t) in enumerate(
-                    [("home", f'/{c["slug"]}/', "Accueil"), ("carte", f'/{c["slug"]}/carte/', "La carte"), ("contact", f'/{c["slug"]}/contact/', "Contact & accès")]))
+                    [("home", f'/{c["slug"]}/', "Accueil"), ("carte", f'#carte', "La carte"), ("contact", f'#contact', "Contact & accès")]))
                 + '<div class="menu-act">'
                 + (f'<a class="btn p" href="tel:{c["tel"]}">📞 Appeler</a>' if tel_ok else '')
                 + f'<a class="btn o" href="{itin}" target="_blank" rel="noopener">📍 Itinéraire</a></div>'
@@ -67,7 +67,7 @@ def render(c):
     def foot():
         return (f'<footer><div class="wrap"><div class="cols"><div><h4>{E(c["name"])}</h4><p>{E(c["pitch"])}</p><p style="margin-top:12px">{E(c["addr"])}</p>'
                 + (f'<p><a href="tel:{c["tel"]}">{E(c["phone"])}</a></p>' if tel_ok else "") +
-                f'</div><div><h4>Pages</h4><p><a href="/{c["slug"]}/">Accueil</a></p><p><a href="/{c["slug"]}/carte/">La carte</a></p><p><a href="/{c["slug"]}/contact/">Contact & accès</a></p></div>'
+                f'</div><div><h4>Pages</h4><p><a href="#accueil">Accueil</a></p><p><a href="#carte">La carte</a></p><p><a href="#contact">Contact & accès</a></p></div>'
                 f'<div><h4>Aujourd’hui</h4><p data-today>…</p><p style="margin-top:10px"><a href="{itin}" target="_blank" rel="noopener">Itinéraire →</a></p></div></div>'
                 f'<div class="legal">© {E(c["name"])} · {E(c["city"])} — Site de démonstration réalisé par {c["brand"]}. Photos et carte d’illustration, remplacées par les vôtres. '
                 f'<a href="mailto:{c["contact"]}?subject=STOP%20{c["slug"]}" style="text-decoration:underline">Ne plus être contacté</a></div></div></footer>'
@@ -82,10 +82,10 @@ def render(c):
                      for sec, (n, desc, p) in picks)
     gal = "".join(f'<img src="{u}" alt="" loading="lazy">' for u in c["gallery"][:5])
     feats = "".join(f"<li>{E(f)}</li>" for f in c["feats"])
-    home = (head(f'{c["name"]} — {c["label"]} à {c["city"]}', f'{c["name"]}, {c["label"]} à {c["city"]}. {c["pitch"]}') + top("home") +
+    home_v = (
             f'<div class="hero"><img src="{c["imgs"][0]}" alt=""><div class="wrap"><div class="kicker">{E(c["label"])} · {E(c["city"])}</div>'
-            f'<h1>{E(c["name"])}</h1><p>{E(c["pitch"])}</p><div class="btns"><a class="btn p" href="/{c["slug"]}/carte/">Voir {menu_title.lower()}</a>'
-            + (f'<a class="btn o" href="tel:{c["tel"]}">📞 <span class="num">{E(c["phone"])}</span><span class="lbl">Appeler</span></a>' if tel_ok else f'<a class="btn o" href="/{c["slug"]}/contact/">Nous contacter</a>') +
+            f'<h1>{E(c["name"])}</h1><p>{E(c["pitch"])}</p><div class="btns"><a class="btn p" href="#carte">Voir {menu_title.lower()}</a>'
+            + (f'<a class="btn o" href="tel:{c["tel"]}">📞 <span class="num">{E(c["phone"])}</span><span class="lbl">Appeler</span></a>' if tel_ok else f'<a class="btn o" href="#contact">Nous contacter</a>') +
             f'</div></div></div>'
             f'<div class="wrap"><div class="quick"><div><small>Aujourd’hui</small><b data-today>…</b></div><div><small>Adresse</small><b>{E(c["addr"])}</b><br><a href="{itin}" target="_blank" rel="noopener">Itinéraire →</a></div>'
             f'<div><small>Téléphone</small>' + (f'<b><a href="tel:{c["tel"]}">{E(c["phone"])}</a></b>' if tel_ok else '<b>Par message</b>') + '</div></div></div>'
@@ -93,15 +93,15 @@ def render(c):
             f'<p class="lead">{E(c["pitch"])} Une adresse de quartier à {E(c["city"])}, où l’on vient pour bien manger et passer un bon moment.</p><ul class="tags">{feats}</ul></div>'
             f'<img src="{c["imgs"][1]}" alt="" loading="lazy"></div></section>'
             f'<section class="menu-prev"><div class="wrap"><div class="label" style="color:#ffd36b">{menu_title}</div><h2>Un aperçu de ce qui vous attend</h2>'
-            f'<div class="dishes">{dishes}</div><p style="margin-top:30px"><a class="btn p" href="/{c["slug"]}/carte/">Toute {menu_title.lower()} →</a></p>'
+            f'<div class="dishes">{dishes}</div><p style="margin-top:30px"><a class="btn p" href="#carte">Toute {menu_title.lower()} →</a></p>'
             f'<p class="note">Carte indicative de démonstration : votre vraie carte et vos prix sont intégrés à la mise en ligne.</p></div></section>'
             f'<section><div class="wrap"><div class="label">En images</div><h2>L’ambiance</h2><div class="gallery">{gal}</div></div></section>'
             f'<section style="padding-top:0"><div class="wrap"><div class="label">Nous rendre visite</div><h2>Horaires & accès</h2><div class="visit">'
             f'<div class="card"><h3>Horaires</h3><ul class="hours" data-hours><li><span>Horaires sur demande</span></li></ul></div>'
             f'<div class="map"><iframe loading="lazy" src="{mapsrc}" title="Plan"></iframe></div></div></div></section>'
             f'<div class="cta"><h2>On vous garde une place ?</h2><p>{E(c["addr"])}</p>'
-            + (f'<a class="btn" href="tel:{c["tel"]}">Appeler {E(c["name"])}</a>' if tel_ok else f'<a class="btn" href="/{c["slug"]}/contact/">Nous contacter</a>') +
-            '</div>' + foot())
+            + (f'<a class="btn" href="tel:{c["tel"]}">Appeler {E(c["name"])}</a>' if tel_ok else f'<a class="btn" href="#contact">Nous contacter</a>') +
+            '</div>')
 
     # ---------- Carte ----------
     tabs = "".join(f'<a href="#s{i}">{E(sec)}</a>' for i, (sec, _) in enumerate(c["menu"]))
@@ -110,15 +110,15 @@ def render(c):
         "".join(f'<div class="item"><div><div class="n">{E(n)}</div>' + (f'<div class="d">{E(d)}</div>' if d else "") +
                 f'</div><div class="lead-dots"></div><div class="p">{price(p)}</div></div>' for n, d, p in items) +
         '</div></div>' for i, (sec, items) in enumerate(c["menu"]))
-    carte = (head(f'{menu_title} — {c["name"]}', f'{menu_title} de {c["name"]} à {c["city"]}') + top("carte") +
+    carte_v = (
              f'<div class="hero page-hero"><img src="{c["imgs"][2]}" alt=""><div class="wrap"><div class="kicker">{E(c["name"])}</div><h1>{menu_title}</h1></div></div>'
              f'<div class="menu-tabs"><div class="wrap">{tabs}</div></div>{secs}'
              f'<div class="wrap"><p class="note" style="padding:30px 0 70px">Carte indicative de démonstration. Prix TTC, service compris. Votre carte réelle est intégrée à la mise en ligne.</p></div>'
-             + foot())
+             )
 
     # ---------- Contact ----------
     mail_to = c["email"] or c["contact"]
-    contact = (head(f'Contact & accès — {c["name"]}', f'Contacter {c["name"]} à {c["city"]} : téléphone, adresse, horaires') + top("contact") +
+    contact_v = (
                f'<div class="hero page-hero"><img src="{c["imgs"][1]}" alt=""><div class="wrap"><div class="kicker">{E(c["name"])}</div><h1>Contact & accès</h1></div></div>'
                f'<section><div class="wrap"><div class="cgrid">'
                + (f'<a class="card" href="tel:{c["tel"]}"><div class="ic">📞</div>Téléphone<b>{E(c["phone"])}</b></a>' if tel_ok else '') +
@@ -133,5 +133,8 @@ def render(c):
                f'<label class="full">Message<textarea name="message" rows="3"></textarea></label><button class="btn p">Envoyer la demande</button></form></div>'
                f'<div class="map"><iframe loading="lazy" src="{mapsrc}" title="Plan"></iframe></div></div>'
                f'<div class="card" style="margin-top:28px"><h3>Horaires d’ouverture</h3><ul class="hours" data-hours><li><span>Horaires sur demande</span></li></ul></div>'
-               f'</div></section>' + foot())
-    return {"": home, "carte": carte, "contact": contact}
+               f'</div></section>')
+    page = (head(f'{c["name"]} — {c["label"]} à {c["city"]}', f'{c["name"]}, {c["label"]} à {c["city"]}. {c["pitch"]}') + top("home")
+            + f'<main class="view on" data-view="accueil">{home_v}</main><main class="view" data-view="carte">{carte_v}</main>'
+              f'<main class="view" data-view="contact">{contact_v}</main>' + foot())
+    return {"": page}
