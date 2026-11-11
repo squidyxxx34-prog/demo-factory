@@ -65,8 +65,10 @@ def render(c):
                 f'<a href="mailto:{c["contact"]}?subject=STOP%20{c["slug"]}" style="text-decoration:underline">Ne plus être contacté</a></div></div></footer>'
                 f'<div class="mbar">' + (f'<a href="tel:{c["tel"]}"><span>📞</span>Appeler</a>' if tel_ok else f'<a href="/{c["slug"]}/contact/"><span>✉️</span>Contact</a>') +
                 f'<a href="{itin}" target="_blank" rel="noopener"><span>📍</span>Itinéraire</a><a href="/{c["slug"]}/carte/"><span>📖</span>La carte</a></div>'
-                + HOURS_JS % json.dumps(c["oh"] or None) + '</body></html>')
+                + HOURS_JS % json.dumps(c["oh"] or None) + '<script src="/assets/site.js" defer></script></body></html>')
 
+    _mq = c["feats"] + [c["city"], c["label"].split(' · ')[0], 'Bienvenue']
+    marquee = '<div class="marquee" aria-hidden="true"><div class="tr">' + ''.join(f'<span>{E(x)}</span>' for x in _mq * 4) + '</div></div>'
     menu_title = "Nos produits" if c["kind"] == "bakery" else "La carte"
     # ---------- Accueil ----------
     picks = [(sec, d) for sec, items in c["menu"] for d in items[:1]][:3]
@@ -81,7 +83,7 @@ def render(c):
             f'</div></div></div>'
             f'<div class="wrap"><div class="quick"><div><small>Aujourd’hui</small><b data-today>…</b></div><div><small>Adresse</small><b>{E(c["addr"])}</b><br><a href="{itin}" target="_blank" rel="noopener">Itinéraire →</a></div>'
             f'<div><small>Téléphone</small>' + (f'<b><a href="tel:{c["tel"]}">{E(c["phone"])}</a></b>' if tel_ok else '<b>Par message</b>') + '</div></div></div>'
-            f'<section><div class="wrap split"><div><div class="label">La maison</div><h2>Bienvenue chez {E(c["name"])}</h2>'
+            + marquee + f'<section><div class="wrap split"><div><div class="label">La maison</div><h2>Bienvenue chez {E(c["name"])}</h2>'
             f'<p class="lead">{E(c["pitch"])} Une adresse de quartier à {E(c["city"])}, où l’on vient pour bien manger et passer un bon moment.</p><ul class="tags">{feats}</ul></div>'
             f'<img src="{c["imgs"][1]}" alt="" loading="lazy"></div></section>'
             f'<section class="menu-prev"><div class="wrap"><div class="label" style="color:#ffd36b">{menu_title}</div><h2>Un aperçu de ce qui vous attend</h2>'
