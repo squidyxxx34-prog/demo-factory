@@ -54,7 +54,15 @@ def render(c):
                 + (f'<span>📞 <a href="tel:{c["tel"]}">{E(c["phone"])}</a></span>' if tel_ok else "") +
                 f'</div></div><header class="nav"><div class="wrap"><a class="brand" href="/{c["slug"]}/">{E(c["name"])}</a><nav>{nav}</nav>'
                 + (f'<a class="btn d" href="/{c["slug"]}/contact/#reserver">Réserver</a>' if c["kind"] in ("restaurant", "bar", "cafe") else call) +
-                '</div></header>')
+                '<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>'
+                '</div></header>'
+                f'<div class="menu-ov" id="menu" aria-hidden="true"><div class="menu-in">'
+                + "".join(f'<a href="{h}" class="big {"on" if k == active else ""}"><small>0{i+1}</small>{t}</a>' for i, (k, h, t) in enumerate(
+                    [("home", f'/{c["slug"]}/', "Accueil"), ("carte", f'/{c["slug"]}/carte/', "La carte"), ("contact", f'/{c["slug"]}/contact/', "Contact & accès")]))
+                + '<div class="menu-act">'
+                + (f'<a class="btn p" href="tel:{c["tel"]}">📞 Appeler</a>' if tel_ok else '')
+                + f'<a class="btn o" href="{itin}" target="_blank" rel="noopener">📍 Itinéraire</a></div>'
+                f'<p class="menu-addr">{E(c["addr"])}<br><span data-status></span></p></div></div>')
 
     def foot():
         return (f'<footer><div class="wrap"><div class="cols"><div><h4>{E(c["name"])}</h4><p>{E(c["pitch"])}</p><p style="margin-top:12px">{E(c["addr"])}</p>'
@@ -63,8 +71,6 @@ def render(c):
                 f'<div><h4>Aujourd’hui</h4><p data-today>…</p><p style="margin-top:10px"><a href="{itin}" target="_blank" rel="noopener">Itinéraire →</a></p></div></div>'
                 f'<div class="legal">© {E(c["name"])} · {E(c["city"])} — Site de démonstration réalisé par {c["brand"]}. Photos et carte d’illustration, remplacées par les vôtres. '
                 f'<a href="mailto:{c["contact"]}?subject=STOP%20{c["slug"]}" style="text-decoration:underline">Ne plus être contacté</a></div></div></footer>'
-                f'<div class="mbar">' + (f'<a href="tel:{c["tel"]}"><span>📞</span>Appeler</a>' if tel_ok else f'<a href="/{c["slug"]}/contact/"><span>✉️</span>Contact</a>') +
-                f'<a href="{itin}" target="_blank" rel="noopener"><span>📍</span>Itinéraire</a><a href="/{c["slug"]}/carte/"><span>📖</span>La carte</a></div>'
                 + HOURS_JS % json.dumps(c["oh"] or None) + '<script src="/assets/site.js" defer></script></body></html>')
 
     _mq = c["feats"] + [c["city"], c["label"].split(' · ')[0], 'Bienvenue']

@@ -69,3 +69,17 @@
     });
   }
 })();
+
+// Menu plein écran (bouton trois barres)
+(function () {
+  const b = document.querySelector('.burger'), ov = document.getElementById('menu');
+  if (!b || !ov) return;
+  const set = open => {
+    document.documentElement.classList.toggle('menu-open', open);
+    b.setAttribute('aria-expanded', open); b.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    ov.setAttribute('aria-hidden', !open);
+  };
+  b.addEventListener('click', () => set(!document.documentElement.classList.contains('menu-open')));
+  ov.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+})();
