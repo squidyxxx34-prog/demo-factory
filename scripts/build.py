@@ -2,6 +2,7 @@
 """Génère un site démo par prospect (data/prospects.json -> docs/<slug>/index.html)
 + la liste des mails de prospection (data/outreach.csv)."""
 import csv, html, json, re, sys, unicodedata
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -85,6 +86,7 @@ def hours_html(oh):
 
 
 def build(p):
+    import sitegen as SITE, menus
     t = p["tags"]
     kind = t.get("amenity") or t.get("shop") or "restaurant"
     accent, dark, label, pitch = THEMES.get(kind, THEMES["restaurant"])
@@ -93,9 +95,9 @@ def build(p):
     if cuisines and kind in ("restaurant", "fast_food"):
         label = f"{label} · cuisine {', '.join(cuisines[:2])}"
     street = " ".join(x for x in [t.get("addr:housenumber", ""), t.get("addr:street", "")] if x).strip()
-    city = t.get("addr:city") or CFG["city"]
+    city = (t.get("addr:city") or CFG["city"]).title() if (t.get("addr:city") or "").isupper() else (t.get("addr:city") or CFG["city"])
     addr = ", ".join(x for x in [street, f"{t.get('addr:postcode', '')} {city}".strip()] if x)
-    phone = t.get("phone") or t.get("contact:phone") or ""
+    phone = (t.get("phone") or t.get("contact:phone") or "").split(";")[0].strip()
     lat, lon = p.get("lat") or p.get("center", {}).get("lat"), p.get("lon") or p.get("center", {}).get("lon")
     slug = f"{slugify(name)}-{p['id'] % 10000}"
     feats = []
@@ -104,28 +106,20 @@ def build(p):
     if t.get("delivery") == "yes": feats.append("Livraison")
     if t.get("wheelchair") == "yes": feats.append("Accès PMR")
     if t.get("diet:vegetarian") in ("yes", "only"): feats.append("Options végétariennes")
-    feats = feats or ["Accueil chaleureux", "Produits de qualité", "Au cœur de " + city]
+    feats = feats or ["Fait maison", "Produits frais", "Accueil chaleureux"]
     imgs = images(kind, t.get("cuisine", ""))
-    bbox = f"{lon-0.004},{lat-0.0025},{lon+0.004},{lat+0.0025}" if lat else ""
-    rep = {
-        "{{NAME}}": html.escape(name), "{{LABEL}}": html.escape(label), "{{PITCH}}": html.escape(pitch),
-        "{{ACCENT}}": accent, "{{DARK}}": dark, "{{ADDR}}": html.escape(addr or city),
-        "{{PHONE}}": html.escape(phone), "{{TEL}}": re.sub(r"[^\d+]", "", phone),
-        "{{PHONE_DISPLAY}}": "" if phone else "hidden", "{{HOURS}}": hours_html(t.get("opening_hours", "")),
-        "{{FEATURES}}": "".join(f"<li class='glass pill'>{html.escape(f)}</li>" for f in feats),
-        "{{MAP}}": f"https://www.openstreetmap.org/export/embed.html?bbox={bbox}&layer=mapnik&marker={lat},{lon}" if lat else "",
-        "{{CITY}}": html.escape(city), "{{NAME_HTML}}": name_html(name),
-        "{{OH_JSON}}": json.dumps(t.get("opening_hours") or None), "{{LAT}}": str(lat), "{{LON}}": str(lon),
-        "{{IMG1}}": imgs[0], "{{IMG2}}": imgs[1], "{{IMG3}}": imgs[2], "{{PRICE}}": str(CFG["price"]), "{{PAY}}": CFG["payment_link"],
-        "{{CONTACT}}": CFG["contact_email"], "{{BRAND}}": CFG["brand"], "{{SLUG}}": slug,
-    }
-    out = TPL
-    for k, v in rep.items():
-        out = out.replace(k, v)
-    d = ROOT / "docs" / slug
-    d.mkdir(parents=True, exist_ok=True)
-    (d / "index.html").write_text(out, encoding="utf-8")
-    return slug, name, kind, t.get("email") or t.get("contact:email") or "", phone, addr
+    pool = [U.format(i) for i in IMGS["restaurant"] + IMGS["french"] + IMGS["cafe"]]
+    gallery = imgs + [u for u in pool if u not in imgs][:2]
+    ctx = dict(name=name, label=label, pitch=pitch, accent=accent, addr=addr or city, city=city, phone=phone,
+               tel=re.sub(r"[^\d+]", "", phone), email=t.get("email") or t.get("contact:email") or "", oh=t.get("opening_hours", ""),
+               lat=lat, lon=lon, imgs=imgs, gallery=gallery, feats=feats, menu=menus.menu_for(kind, t.get("cuisine", "")),
+               slug=slug, pay=CFG["payment_link"], price=CFG["price"], brand=CFG["brand"], contact=CFG["contact_email"], kind=kind)
+    pages = SITE.render(ctx)
+    for sub, htmlpage in pages.items():
+        d = ROOT / "docs" / slug / sub
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(htmlpage, encoding="utf-8")
+    return slug, name, kind, ctx["email"], phone, addr
 
 
 def main():
