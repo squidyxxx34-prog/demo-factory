@@ -79,7 +79,7 @@ def render(c):
     home = (head(f'{c["name"]} — {c["label"]} à {c["city"]}', f'{c["name"]}, {c["label"]} à {c["city"]}. {c["pitch"]}') + top("home") +
             f'<div class="hero"><img src="{c["imgs"][0]}" alt=""><div class="wrap"><div class="kicker">{E(c["label"])} · {E(c["city"])}</div>'
             f'<h1>{E(c["name"])}</h1><p>{E(c["pitch"])}</p><div class="btns"><a class="btn p" href="/{c["slug"]}/carte/">Voir {menu_title.lower()}</a>'
-            + (f'<a class="btn o" href="tel:{c["tel"]}">📞 {E(c["phone"])}</a>' if tel_ok else f'<a class="btn o" href="/{c["slug"]}/contact/">Nous contacter</a>') +
+            + (f'<a class="btn o" href="tel:{c["tel"]}">📞 <span class="num">{E(c["phone"])}</span><span class="lbl">Appeler</span></a>' if tel_ok else f'<a class="btn o" href="/{c["slug"]}/contact/">Nous contacter</a>') +
             f'</div></div></div>'
             f'<div class="wrap"><div class="quick"><div><small>Aujourd’hui</small><b data-today>…</b></div><div><small>Adresse</small><b>{E(c["addr"])}</b><br><a href="{itin}" target="_blank" rel="noopener">Itinéraire →</a></div>'
             f'<div><small>Téléphone</small>' + (f'<b><a href="tel:{c["tel"]}">{E(c["phone"])}</a></b>' if tel_ok else '<b>Par message</b>') + '</div></div></div>'
