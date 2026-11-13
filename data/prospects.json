@@ -1864,5 +1864,918 @@
    "addr:postcode": "30000",
    "addr:city": "Nîmes"
   }
+ },
+ {
+  "id": 739890373,
+  "lat": 44.8181369,
+  "lon": 0.0694069,
+  "tags": {
+   "name": "Le Bélvèdere",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 5 57 47 40 33",
+   "opening_hours": "12:00-14:00,19:00-20:45;Tu-We off",
+   "addr:housenumber": "1",
+   "addr:street": "Côte de la Tourbeille",
+   "addr:postcode": "33890",
+   "addr:city": "JUILLAC",
+   "outdoor_seating": "yes",
+   "email": "le-belvedere@wanadoo.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 6444837990,
+  "lat": 44.8407194,
+  "lon": -0.5817901,
+  "tags": {
+   "name": "Moko Coffee",
+   "amenity": "cafe",
+   "cuisine": "coffee_shop",
+   "contact:phone": "+33 5 56 23 17 55",
+   "opening_hours": "Tu-Fr 09:00-17:30; Sa 10:00-18:00",
+   "addr:housenumber": "20",
+   "addr:street": "Rue Castelnau d'Auros",
+   "addr:postcode": "33000",
+   "addr:city": "Bordeaux",
+   "outdoor_seating": "no",
+   "diet:vegetarian": "only",
+   "email": "mokocoffeeshop@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7394477932,
+  "lat": 44.8883734,
+  "lon": -0.7022787,
+  "tags": {
+   "name": "La Ferme du Petit Argelas",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "phone": "+33 6 13 19 67 35",
+   "opening_hours": "Mo-Su 10:45-14:00,18:00-21:00",
+   "addr:housenumber": "15",
+   "addr:street": "Place de la Liberté",
+   "addr:postcode": "33160",
+   "addr:city": "Saint-Médard en Jalles",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "delivery": "yes",
+   "email": "contact.lepetitargelas@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7947386899,
+  "lat": 44.8380063,
+  "lon": -0.5731577,
+  "tags": {
+   "name": "L'Originel",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 5 56 44 21 19",
+   "opening_hours": "Tu-Sa 12:00-14:30,19:30-21:30",
+   "addr:housenumber": "35",
+   "addr:street": "Rue du Loup",
+   "addr:postcode": "33000",
+   "addr:city": "Bordeaux",
+   "email": "originelrestaurant33@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 4485480140,
+  "lat": 43.3908983,
+  "lon": -1.6857053,
+  "tags": {
+   "name": "Bistrot le Jeu de Paume",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "contact:phone": "+33 9 81 91 61 32",
+   "opening_hours": "Mo-Su 12:00-14:00,19:00-22:00; Th off; Su [-1]",
+   "addr:housenumber": "11",
+   "addr:street": "Avenue du Commandant Passicot",
+   "addr:postcode": "64500",
+   "addr:city": "Ciboure",
+   "outdoor_seating": "yes",
+   "wheelchair": "no",
+   "email": "bistrotjeudepaume@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 5670184927,
+  "lat": 43.3603182,
+  "lon": -1.3990379,
+  "tags": {
+   "name": "O'Burger Shop",
+   "amenity": "fast_food",
+   "cuisine": "burger",
+   "contact:phone": "+33 5 59 45 06 56",
+   "opening_hours": "Mo-Fr 11:30-13:30,18:30-21:30; Sa 18:30-21:30",
+   "addr:housenumber": "19",
+   "addr:street": "Place Duhalde",
+   "addr:postcode": "64250",
+   "addr:city": "Cambo-les-Bains",
+   "outdoor_seating": "no",
+   "takeaway": "only",
+   "delivery": "no",
+   "email": "oburgertruck64@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 5682443841,
+  "lat": 43.0664286,
+  "lon": -0.8764306,
+  "tags": {
+   "name": "Alfitcha",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "phone": "+33 5 59 28 61 37",
+   "opening_hours": "Mo-Su 10:00-20:00 \"Sur réservation\"",
+   "addr:street": "Bourg",
+   "addr:postcode": "64560",
+   "addr:city": "Licq-Atherey",
+   "email": "jeanpe.laffargue@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7472331267,
+  "lat": 43.3036648,
+  "lon": -0.3208272,
+  "tags": {
+   "name": "Le Bouillon Béarnais",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "phone": "+33 5 59 33 71 79",
+   "opening_hours": "Mo-Sa 12:00-14:00,19:00-23:00",
+   "addr:housenumber": "4",
+   "addr:street": "Avenue du Bataillon de Joinville",
+   "addr:postcode": "64320",
+   "addr:city": "Bizanos",
+   "email": "la-cantine-de-la-section@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 11076922910,
+  "lat": 43.3578314,
+  "lon": -0.7911706,
+  "tags": {
+   "name": "Auberge Claverie",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "phone": "+33 5 59 66 03 80",
+   "opening_hours": "Su, Tu-Th 09:00-15:00; Fr-Sa 09:00-15:00, 18:00-22:00",
+   "addr:housenumber": "2",
+   "addr:street": "Place de l'Estanquet",
+   "addr:postcode": "64190",
+   "addr:city": "Audaux",
+   "email": "aubergeclaverie@yahoo.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 800862113,
+  "lat": 43.5356074,
+  "lon": 5.2951638,
+  "tags": {
+   "name": "La table de Rina",
+   "amenity": "restaurant",
+   "cuisine": "italian",
+   "contact:phone": "+33 4 42 92 25 68",
+   "opening_hours": "Tu-Sa 12:00-14:00, 19:30-22:00",
+   "addr:housenumber": "19",
+   "addr:street": "Chemin du Cimetière",
+   "addr:city": "Ventabren",
+   "outdoor_seating": "yes",
+   "email": "latablederina@hotmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 1653249116,
+  "lat": 43.2954574,
+  "lon": 5.382417,
+  "tags": {
+   "name": "La Mesa Latina",
+   "amenity": "restaurant",
+   "cuisine": "latin_american",
+   "phone": "+33 9 83 05 32 52",
+   "opening_hours": "Th-Fr 08:30-15:30, 19:00-23:00; Sa 10:30-16:00, 19:00-23:30",
+   "addr:housenumber": "20",
+   "addr:street": "Cours Julien",
+   "addr:postcode": "13006",
+   "addr:city": "Marseille",
+   "email": "bbbistrot@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 2039981246,
+  "lat": 43.5299155,
+  "lon": 5.4455644,
+  "tags": {
+   "name": "Petit Baron",
+   "amenity": "restaurant",
+   "cuisine": "french;tapas",
+   "phone": "+33 6 13 02 21 04",
+   "opening_hours": "Mo-Su 12:00-02:00",
+   "addr:housenumber": "2",
+   "addr:street": "Place des Fontêtes",
+   "addr:postcode": "13100",
+   "addr:city": "Aix-en-Provence",
+   "outdoor_seating": "yes",
+   "email": "mathieucami@yahoo.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 2174798902,
+  "lat": 43.3083923,
+  "lon": 5.400097,
+  "tags": {
+   "name": "La Table de Guy",
+   "amenity": "restaurant",
+   "cuisine": "creole",
+   "phone": "+33 4 91 05 93 57",
+   "opening_hours": "Mo-Su 19:00-02:00",
+   "addr:housenumber": "145",
+   "addr:street": "Avenue des Chartreux",
+   "addr:city": "Marseille",
+   "email": "latabledeguy@hotmail.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 4556212289,
+  "lat": 43.5283017,
+  "lon": 5.4467017,
+  "tags": {
+   "name": "Le Bouche à Oreille",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 9 72 89 19 19",
+   "opening_hours": "Tu-Th,Sa 12:00-14:00,19:00-22:00; Fr 12:00 - 22:00; Su-Mo off",
+   "addr:housenumber": "1",
+   "addr:street": "Rue Aumône Vieille",
+   "addr:postcode": "13100",
+   "addr:city": "Aix-en-Provence",
+   "email": "leboucheaoreille.aix@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 5740354821,
+  "lat": 43.5305071,
+  "lon": 5.4456786,
+  "tags": {
+   "name": "De l'Une à l'Autre",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 4 42 22 79 61",
+   "opening_hours": "Tu-Sa 12:00-14:00, 19:00-22:00; Su-Mo off",
+   "addr:housenumber": "14",
+   "addr:street": "Rue du Cancel",
+   "addr:postcode": "13100",
+   "addr:city": "Aix-en-Provence",
+   "email": "delunealautre.aix@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 10066478326,
+  "lat": 43.6412607,
+  "lon": 4.7972456,
+  "tags": {
+   "name": "Ho Sushi",
+   "amenity": "restaurant",
+   "cuisine": "japanese",
+   "phone": "+33 4 88 09 28 98",
+   "opening_hours": "Tu-Su 11:30-14:00,18:00-22:00",
+   "addr:housenumber": "1",
+   "addr:street": "Rue Isaac Newton",
+   "addr:postcode": "13310",
+   "addr:city": "Saint-Martin-de-Crau",
+   "takeaway": "yes",
+   "delivery": "yes",
+   "wheelchair": "yes",
+   "email": "hosushismc@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 11874190075,
+  "lat": 43.5282177,
+  "lon": 5.4454835,
+  "tags": {
+   "name": "Le four sous le platane",
+   "amenity": "restaurant",
+   "cuisine": "italian;pizza",
+   "phone": "+33 4 42 26 07 71",
+   "opening_hours": "Tu-Sa 12:00-14:30, 19:00-23:30",
+   "addr:housenumber": "31",
+   "addr:street": "Rue de la Couronne",
+   "addr:postcode": "13100",
+   "addr:city": "Aix-en-Provence",
+   "outdoor_seating": "yes",
+   "email": "lefoursousleplatane@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 672113316,
+  "lat": 44.9290375,
+  "lon": 4.8901288,
+  "tags": {
+   "name": "La Terrasse du Champs de Mars",
+   "amenity": "restaurant",
+   "cuisine": "tapas;fine_dining",
+   "phone": "+33 4 75 62 35 22",
+   "opening_hours": "Tu-Sa 11:00-14:30,18:30-23:00",
+   "addr:housenumber": "29",
+   "addr:street": "Place Aristide Briand",
+   "addr:postcode": "26000",
+   "addr:city": "Valence",
+   "takeaway": "no",
+   "delivery": "no",
+   "email": "valence.laterrasse@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 4289488641,
+  "lat": 44.932774,
+  "lon": 4.8924751,
+  "tags": {
+   "name": "Margherita",
+   "amenity": "restaurant",
+   "cuisine": "italian;pizza",
+   "phone": "+33 4 75 44 01 70",
+   "opening_hours": "\"Du 01/01 au 31/12 Ouverture de 11h30 à 14h30 et de 18h30 à 22h30\"",
+   "addr:housenumber": "7",
+   "addr:street": "Rue Émile Augier",
+   "addr:postcode": "26000",
+   "addr:city": "Valence",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "delivery": "no",
+   "diet:vegetarian": "yes",
+   "email": "adgroupemargherita@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 4413810034,
+  "lat": 44.9340208,
+  "lon": 4.9043017,
+  "tags": {
+   "name": "So Good (Burger & Pizza)",
+   "amenity": "fast_food",
+   "cuisine": "burger;kebab",
+   "phone": "+33 4 82 32 98 50",
+   "opening_hours": "Mo-Su 11:00-23:00",
+   "addr:housenumber": "105",
+   "addr:street": "Avenue de Romans",
+   "addr:postcode": "26000",
+   "addr:city": "Valence",
+   "takeaway": "yes",
+   "delivery": "yes",
+   "email": "soogoodvalence@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 6404638236,
+  "lat": 44.9280943,
+  "lon": 4.8902185,
+  "tags": {
+   "name": "Sugo Cantine Italienne",
+   "amenity": "fast_food",
+   "cuisine": "italian",
+   "phone": "+33 4 75 41 44 81",
+   "opening_hours": "\"8h à 15h du lundi au samedi\"",
+   "addr:housenumber": "55",
+   "addr:street": "Avenue Victor Hugo",
+   "addr:postcode": "26000",
+   "addr:city": "Valence",
+   "wheelchair": "yes",
+   "email": "sugo@live.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 10882963128,
+  "lat": 44.9328502,
+  "lon": 4.8945208,
+  "tags": {
+   "name": "La suite",
+   "amenity": "restaurant",
+   "cuisine": "traditional",
+   "phone": "+33 4 75 25 77 35",
+   "opening_hours": "Tu-Th 08:00-14:00; Fr-Sa 08:00-22:00",
+   "addr:housenumber": "51",
+   "addr:street": "Rue André-François Bouffier",
+   "addr:postcode": "26000",
+   "addr:city": "Valence",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "delivery": "no",
+   "diet:vegetarian": "yes",
+   "email": "sylvainviougeaspro@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 8739730787,
+  "lat": 45.0029746,
+  "lon": -1.2012517,
+  "tags": {
+   "name": "Le Mulligan",
+   "amenity": "bar",
+   "phone": "+33677850163",
+   "opening_hours": "Mo-Su 10:00-02:00",
+   "addr:street": "Boulevard de la Plage",
+   "addr:postcode": "33680",
+   "addr:city": "Lacanau-Océan",
+   "outdoor_seating": "yes",
+   "wheelchair": "yes",
+   "email": "dimitribiau@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 13658850678,
+  "lat": 44.7685665,
+  "lon": -0.5797478,
+  "tags": {
+   "name": "Le Patio",
+   "amenity": "bar",
+   "phone": "+33 9 83 36 66 50",
+   "opening_hours": "Mo-Fr 17:30-23:30; Sa 18:30-23:30",
+   "addr:housenumber": "41",
+   "addr:street": "Route de Léognan",
+   "addr:postcode": "33140",
+   "addr:city": "Villenave-d'Ornon",
+   "email": "lepatio-33@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 60869401,
+  "lat": 44.8951637,
+  "lon": -0.7199945,
+  "tags": {
+   "name": "Pétaouchnok",
+   "amenity": "restaurant",
+   "phone": "+33 5 56 51 97 30",
+   "opening_hours": "Mo-Sa 12:00-14:00, Tu-Sa 19:00-21:30",
+   "addr:housenumber": "10",
+   "addr:street": "Rue Serge Noailles",
+   "addr:postcode": "33160",
+   "addr:city": "Saint-Médard-en-Jalles",
+   "email": "petaouchnok.restaurant@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 4579749899,
+  "lat": 43.3875488,
+  "lon": -1.6640188,
+  "tags": {
+   "name": "Le p'tit suisse",
+   "amenity": "bar",
+   "phone": "+33 5 59 51 85 51;+33 5 59 51 85 52",
+   "opening_hours": "Mo-Su 08:00-00:00",
+   "addr:street": "Place des Corsaires",
+   "addr:postcode": "64500",
+   "addr:city": "Saint-Jean-de-Luz",
+   "outdoor_seating": "yes",
+   "wheelchair": "yes",
+   "email": "latxalupa@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7595863372,
+  "lat": 43.3916689,
+  "lon": -1.6600727,
+  "tags": {
+   "name": "L'Essentiel",
+   "amenity": "restaurant",
+   "phone": "+33 5 47 02 41 47",
+   "opening_hours": "Fr-We12:00-14:00,19:30-22:00",
+   "addr:housenumber": "4",
+   "addr:street": "Rue Dalbarade",
+   "addr:postcode": "64500",
+   "addr:city": "Saint-Jean-de-Luz",
+   "email": "lessentiel64500@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7646196870,
+  "lat": 43.3915686,
+  "lon": -1.6596173,
+  "tags": {
+   "name": "Tavola Calda",
+   "amenity": "restaurant",
+   "phone": "+33 5 59 24 84 48",
+   "opening_hours": "We-Su 12:00-22:00",
+   "addr:housenumber": "2-5",
+   "addr:street": "Rue Dornaldeguy",
+   "addr:postcode": "64500",
+   "addr:city": "Saint-Jean-de-Luz",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "wheelchair": "yes",
+   "email": "txitxubistroitaluzien@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7673179180,
+  "lat": 43.3880914,
+  "lon": -1.6608407,
+  "tags": {
+   "name": "La pile d'assiettes",
+   "amenity": "restaurant",
+   "phone": "+33 9 81 97 42 40",
+   "opening_hours": "09:30-15:00,18:30-22:00; We off",
+   "addr:housenumber": "6",
+   "addr:street": "Rue d'Ellissagaray",
+   "addr:postcode": "64500",
+   "addr:city": "Saint-Jean-de-Luz",
+   "diet:vegetarian": "yes",
+   "email": "laxaisas@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 1933775254,
+  "lat": 43.2956477,
+  "lon": 5.3956492,
+  "tags": {
+   "name": "La Cuisine de Gagny",
+   "amenity": "restaurant",
+   "phone": "+33 6 59 05 86 19",
+   "opening_hours": "Mo-Fr 11:45-14:30",
+   "addr:housenumber": "153",
+   "addr:street": "Boulevard Chave",
+   "addr:city": "Marseille",
+   "takeaway": "yes",
+   "email": "lacuisinedegagny@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 5407713780,
+  "lat": 43.4856988,
+  "lon": 5.341583,
+  "tags": {
+   "name": "Pauseto",
+   "amenity": "restaurant",
+   "phone": "+33 4 65 04 27 53",
+   "opening_hours": "Mo-Fr 11:45-15:00",
+   "addr:housenumber": "560",
+   "addr:street": "Avenue Galilée",
+   "addr:postcode": "13290",
+   "addr:city": "Aix-en-Provence",
+   "outdoor_seating": "yes",
+   "wheelchair": "yes",
+   "email": "Restaurantpauseto@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7244604596,
+  "lat": 43.5300346,
+  "lon": 5.4500925,
+  "tags": {
+   "name": "l'Incontournable",
+   "amenity": "restaurant",
+   "phone": "+33 9 80 32 86 32",
+   "opening_hours": "Tu-Sa 12:00-14:00, 19:30-22:00",
+   "addr:housenumber": "14",
+   "addr:street": "Rue Lucas de Montigny",
+   "addr:postcode": "13100",
+   "addr:city": "Aix-en-Provence",
+   "email": "incontournable.aix@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7931960512,
+  "lat": 43.2863164,
+  "lon": 5.6033112,
+  "tags": {
+   "name": "La Kandide",
+   "amenity": "restaurant",
+   "phone": "+33 4 42 70 90 47",
+   "opening_hours": "Mo-Fr 11:30-14:30",
+   "addr:housenumber": "248",
+   "addr:street": "Avenue des Paluds",
+   "addr:postcode": "13783",
+   "addr:city": "Aubagne",
+   "email": "lekandide.restaurant@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 11428887770,
+  "lat": 43.2902645,
+  "lon": 5.3591248,
+  "tags": {
+   "name": "Bar de l'Avenue",
+   "amenity": "cafe",
+   "phone": "+33 4 91 52 46 50",
+   "opening_hours": "Mo-Fr 07:00-20:00; Sa-Su 08:00-14:00",
+   "addr:housenumber": "28",
+   "addr:street": "Avenue Pasteur",
+   "addr:postcode": "13007",
+   "addr:city": "Marseille",
+   "outdoor_seating": "yes",
+   "email": "philippeagnello.bardelavenue@sfr.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7235355175,
+  "lat": 43.9880536,
+  "lon": 7.5512253,
+  "tags": {
+   "name": "Librairie du Caïros",
+   "amenity": "cafe",
+   "phone": "+33 6 37 59 98 00",
+   "opening_hours": "09:30-13:00,16:00-19:00; Fr off",
+   "addr:housenumber": "12",
+   "addr:street": "Place Ciapagne",
+   "addr:postcode": "06540",
+   "addr:city": "Saorge",
+   "outdoor_seating": "terrace",
+   "email": "librairie-du-cairos@orange.fR"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7866591515,
+  "lat": 43.0947442,
+  "lon": -1.017256,
+  "tags": {
+   "name": "Ahusquy",
+   "amenity": "restaurant",
+   "cuisine": "basque",
+   "phone": "+33 5 59 28 57 27",
+   "opening_hours": "04/04/2026 vis 15/11/2026 von 08h30 bis 22h00",
+   "addr:postcode": "64130",
+   "addr:city": "Aussurucq",
+   "email": "ahusky@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7142410789,
+  "lat": 43.4019501,
+  "lon": 5.2612921,
+  "tags": {
+   "name": "Restaurant Les Lanciers",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "phone": "+33 4 42 89 70 50",
+   "opening_hours": "mardi\t07:00–16:00 mercredi\t07:00–16:00 jeudi\t07:00–16:00 vendredi\t07:00–16:00 samedi\tFermé dimanche\tFermé lundi\t07:00–16:00",
+   "addr:housenumber": "52",
+   "addr:postcode": "13700",
+   "addr:city": "Marignane",
+   "takeaway": "yes",
+   "wheelchair": "yes",
+   "email": "leslanciers52@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 9385586517,
+  "lat": 43.2924136,
+  "lon": 5.3751941,
+  "tags": {
+   "name": "Ca Phê S",
+   "amenity": "cafe",
+   "cuisine": "coffee_shop;vietnamese",
+   "phone": "+33972531317",
+   "opening_hours": "Tu-Sa 09:30-19:00; Su 09:30-18:00",
+   "addr:housenumber": "35",
+   "addr:city": "Marseille",
+   "outdoor_seating": "yes",
+   "diet:vegetarian": "yes",
+   "email": "caphes.marseille@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 273741137,
+  "lat": 44.7766077,
+  "lon": 5.1430889,
+  "tags": {
+   "name": "le Détour",
+   "amenity": "restaurant",
+   "cuisine": "regional;tapas",
+   "phone": "+33 4 26 60 22 74",
+   "opening_hours": "Mo,Tu,Fr 08:00-15:00,17:00-22:00; We 08:00-15:00; Sa 08:00-22:00; Su 08:00-18:00",
+   "addr:housenumber": "2",
+   "addr:postcode": "26400",
+   "addr:city": "Beaufort-sur-Gervanne",
+   "outdoor_seating": "terrace",
+   "diet:vegetarian": "yes",
+   "email": "ledetourbeaufort@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 3712175352,
+  "lat": 45.5682544,
+  "lon": -1.0646158,
+  "tags": {
+   "name": "L'Escale",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 5 56 09 16 53",
+   "addr:housenumber": "17",
+   "addr:street": "Avenue du Phare de Cordouan",
+   "addr:city": "Le Verdon-sur-mer",
+   "email": "brasserielescale@hotmail.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 3713925162,
+  "lat": 45.1856558,
+  "lon": -1.0588566,
+  "tags": {
+   "name": "Restaurant d'Hourtin",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33556091115",
+   "addr:housenumber": "17",
+   "addr:street": "Place de l'Église",
+   "addr:city": "Hourtin",
+   "email": "hbrhourtin@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 3715629197,
+  "lat": 45.4040467,
+  "lon": -0.9106296,
+  "tags": {
+   "name": "Le Canoé",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33556415131",
+   "addr:housenumber": "1",
+   "addr:street": "Route du Port de Goulée",
+   "addr:city": "Valeyrac",
+   "email": "patrice.petit00@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 252881349,
+  "lat": 44.7130385,
+  "lon": -0.8156885,
+  "tags": {
+   "name": "Le Petit Sourire",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 5 57 71 81 14",
+   "addr:housenumber": "18",
+   "addr:street": "Boulevard des Girondins",
+   "addr:postcode": "33380",
+   "addr:city": "Croix d'Hins",
+   "email": "suzannamachado@hotmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 1071028931,
+  "lat": 43.2214856,
+  "lon": -0.884035,
+  "tags": {
+   "name": "Etcheto Ostatüa",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "phone": "+33 5 59 28 29 81",
+   "addr:housenumber": "14",
+   "addr:street": "Rue de Bela",
+   "addr:postcode": "64130",
+   "addr:city": "Mauléon-Licharre",
+   "email": "arnaud.etcheto@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 3737600279,
+  "lat": 43.473593,
+  "lon": -1.451735,
+  "tags": {
+   "name": "Hiriburu",
+   "amenity": "restaurant",
+   "cuisine": "french",
+   "phone": "+33 5 59 44 07 60",
+   "addr:housenumber": "27",
+   "addr:street": "Avenue de la Basse Navarre",
+   "addr:city": "Saint-Pierre-d'Irube",
+   "email": "hiriburu-traiteur@orange.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 5630123522,
+  "lat": 43.420672,
+  "lon": -1.6214331,
+  "tags": {
+   "name": "Le bel endroit",
+   "amenity": "fast_food",
+   "cuisine": "burger;salad;poke;tapas;local",
+   "phone": "+33 7 69 15 82 18",
+   "addr:street": "Chemin de Senix",
+   "addr:postcode": "64500",
+   "addr:city": "Saint-Jean-de-Luz",
+   "outdoor_seating": "yes",
+   "email": "lebelendroit@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7673194100,
+  "lat": 43.3893816,
+  "lon": -1.6628583,
+  "tags": {
+   "name": "Crêperie Piper Beltz",
+   "amenity": "restaurant",
+   "cuisine": "crepe",
+   "phone": "+33 5 59 24 46 32",
+   "addr:housenumber": "29",
+   "addr:street": "Rue Joseph Garat",
+   "addr:postcode": "64500",
+   "addr:city": "Saint-Jean-de-Luz",
+   "email": "hontangjulien@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 7673233995,
+  "lat": 43.3942897,
+  "lon": -1.6849535,
+  "tags": {
+   "name": "Chez Jules",
+   "amenity": "restaurant",
+   "cuisine": "traditional",
+   "phone": "+33 6 72 00 37 89",
+   "addr:housenumber": "45",
+   "addr:street": "Avenue du Commandant Passicot",
+   "addr:postcode": "64500",
+   "addr:city": "Ciboure",
+   "outdoor_seating": "yes",
+   "wheelchair": "yes",
+   "email": "uhaina@gmail.com"
+  },
+  "batch": 4
+ },
+ {
+  "id": 1290866489,
+  "lat": 43.2968982,
+  "lon": 5.3692349,
+  "tags": {
+   "name": "Ciao Marcello",
+   "amenity": "restaurant",
+   "cuisine": "french;italian;pizza;regional",
+   "phone": "+33 4 91 91 22 69",
+   "addr:housenumber": "4",
+   "addr:street": "Rue du Lacydon",
+   "addr:postcode": "13002",
+   "addr:city": "Marseille",
+   "email": "cafedesepices@yahoo.fr"
+  },
+  "batch": 4
+ },
+ {
+  "id": 4706641761,
+  "lat": 43.7449226,
+  "lon": 4.7956016,
+  "tags": {
+   "name": "Au Porte Mages",
+   "amenity": "restaurant",
+   "cuisine": "regional",
+   "phone": "+33 4 90 54 40 48",
+   "addr:street": "Rue Porte Mage",
+   "addr:postcode": "13520",
+   "addr:city": "Les Baux-de-Provence",
+   "outdoor_seating": "garden",
+   "wheelchair": "no",
+   "diet:vegetarian": "yes",
+   "email": "auportemages@hotmail.com"
+  },
+  "batch": 4
  }
 ]
